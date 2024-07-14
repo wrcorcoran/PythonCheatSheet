@@ -32,6 +32,14 @@ class UF:
     def union(self, x, y):
         self.table[self.find(x)] = self.find(y)
 ```
+## DFS (grid based)
+```
+    def dfs(x, y):
+        for x2, y2 in ((x+1, y), (x-1, y), (x, y+1), (x, y-1)):
+            if 0 <= x2 < m and 0 <= y2 < n and board[x2][y2] == 'O':
+                dfs(x2, y2)
+```
+
 # Tricks
 - reverse list: `lst[::-1]`
 
