@@ -32,7 +32,8 @@ class UF:
     def union(self, x, y):
         self.table[self.find(x)] = self.find(y)
 ```
-
+# Tricks
+- reverse list: `lst[::-1]`
 
 # Data Structures
 
