@@ -2,20 +2,37 @@
 
 A Cheat Sheet 📜 to **revise** Python syntax in **less time**. Particularly useful for solving Data Structure and Algorithmic problems or a quick overview before an interview.
 
-> [Click here for similar Java Resource (not made by me)](https://drive.google.com/file/d/1ao4ZA28zzBttDkuS6MLQI52gDs_CJZEm/view) <br>
-> Get a PDF of this sheet at the end. <br>
-> Leave a ⭐ if you like the cheat sheet (contributions welcome!) <br>
-
 # Basics
 
 - Data Types
 
     ![Untitled](https://user-images.githubusercontent.com/59110866/173563442-1a6fa3d2-b569-4eb0-99cc-9b91cc8be1eb.png)
 
-- Operators and it’s precedence
+- Operators and precedence
     
     ![Untitled](https://user-images.githubusercontent.com/47276307/172329850-61fc0809-a4b0-416c-848b-1c502ecb4772.jpg)
     
+# Useful Non-native Structures:
+*My implementations of multiple useful data structures.*
+
+## Union Find
+``` Python
+class UF:
+    def __init__(self):
+        self.table = {}
+
+    # O(α(n))
+    def find(self, x):
+        y = self.table[x] = self.table.get(x, x)
+        if x != y:
+            y = self.table[x] = self.find(y)
+        return y
+
+    # O(α(n))
+    def union(self, x, y):
+        self.table[self.find(x)] = self.find(y)
+```
+
 
 # Data Structures
 
